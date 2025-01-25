@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Stack } from 'expo-router/stack';
-import NavBar from '../components/Navbar'; // Assuming NavBar component is located here
+import NavBar from '../components/NavBar'; // Assuming NavBar component is located here
 
 export default function Layout() {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
+
       <Stack initialRouteName="SignUp">
         <Stack.Screen
           name="SignUp"
@@ -28,8 +29,6 @@ export default function Layout() {
             header: () => <NavBar />, // Show NavBar for tabs screen
           }}
         />
-
-       
 
         {/* SignIn Screen: No NavBar */}
         <Stack.Screen

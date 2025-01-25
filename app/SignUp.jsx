@@ -20,14 +20,14 @@ export default function SignUpScreen() {
       <Text style={styles.text2}>You can take a test to customize your learning experience. Explore the courses and grab the job.</Text>
 
       <View style={styles.socialButtonsContainer}>
-       <TouchableOpacity style={styles.socialButton}>
-                 <Image source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIbudNn2WDl1Lc_jAa_B4bwjPyjIJW-fcoQ&s'}} style={styles.socialButtonImage} />
-                 <Text style={styles.socialButtonText}>Google</Text>
-               </TouchableOpacity>
-               <TouchableOpacity style={styles.socialButton}>
-                 <Image source={{uri:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png'}} style={styles.socialButtonImage} />
-                 <Text style={styles.socialButtonText}>LinkedIn</Text>
-               </TouchableOpacity>
+        <TouchableOpacity style={styles.socialButton}>
+          <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIbudNn2WDl1Lc_jAa_B4bwjPyjIJW-fcoQ&s' }} style={styles.socialButtonImage} />
+          <Text style={styles.socialButtonText}>Google</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.socialButton}>
+          <Image source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png' }} style={styles.socialButtonImage} />
+          <Text style={styles.socialButtonText}>LinkedIn</Text>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.inputContainer}>

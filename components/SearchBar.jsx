@@ -1,5 +1,6 @@
 import { View, Text, TextInput } from 'react'
 import React from 'react'
+import { router } from "expo-router";
 import { Ionicons } from '@expo/vector-icons'
 
 

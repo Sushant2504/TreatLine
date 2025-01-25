@@ -5,81 +5,83 @@ import { FontAwesome } from '@expo/vector-icons'; // For FontAwesome icon
 
 export default function OnboardingScreen() {
   const router = useRouter();
-  const [currentStep, setCurrentStep] = useState(0);
+//   const [currentStep, setCurrentStep] = useState(0);
 
-  const images = [
-    require('./../assets/images/onboard (1).png'),
-    require('./../assets/images/onboard (2).png'),
-    require('./../assets/images/onboard (3).png'),
-    require('./../assets/images/onboard (4).png'),
-  ];
+//   const images = [
+//     require('./../assets/images/onboard (1).png'),
+//     require('./../assets/images/onboard (2).png'),
+//     require('./../assets/images/onboard (3).png'),
+//     require('./../assets/images/onboard (4).png'),
+//   ];
 
-  const titles = [
-    "Welcome to Ascend AI!",
-    "Track Your Progress",
-    "Enhance Your Skills",
-    "Ready to Start Your Journey"
-  ];
+//   const titles = [
+//     "Welcome to Ascend AI!",
+//     "Track Your Progress",
+//     "Enhance Your Skills",
+//     "Ready to Start Your Journey"
+//   ];
 
-  const descriptions = [
-    "Let's start by introducing you to our app. Learn new skills, track your progress, and achieve great things!",
-    "Keep track of your growth with personalized insights and tips.",
-    "Upgrade your skills and learn cutting-edge technologies.",
-    "You are now ready to begin your journey with Ascend AI. Let's make it happen!"
-  ];
+//   const descriptions = [
+//     "Let's start by introducing you to our app. Learn new skills, track your progress, and achieve great things!",
+//     "Keep track of your growth with personalized insights and tips.",
+//     "Upgrade your skills and learn cutting-edge technologies.",
+//     "You are now ready to begin your journey with Ascend AI. Let's make it happen!"
+//   ];
 
-  const colors = [
-    '#F2F7FC', // Light Blue
-    '#FFF1E6', // Peach
-    '#E6F9F9', // Light Cyan
-    '#F9E6E6', // Light Pink
-  ];
+//   const colors = [
+//     '#F2F7FC', // Light Blue
+//     '#FFF1E6', // Peach
+//     '#E6F9F9', // Light Cyan
+//     '#F9E6E6', // Light Pink
+//   ];
 
-  const handleNext = () => {
-    if (currentStep < 3) {
-      setCurrentStep(currentStep + 1);
-    } else {
-      router.push('/skills'); 
-    }
-  };
+//   const handleNext = () => {
+//     if (currentStep < 3) {
+//       setCurrentStep(currentStep + 1);
+//     } else {
+//       router.push('/skills'); 
+//     }
+//   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors[currentStep] }]}>
-      <View style={styles.overlay}>
-        {/* Title at the top */}
-        <Text style={styles.title}>{titles[currentStep]}</Text>
-        
-        {/* Image */}
-        <Image source={images[currentStep]} style={styles.backgroundImage} />
-        
-        {/* Description Text */}
-        <Text style={styles.description}>{descriptions[currentStep]}</Text>
 
-        {/* Dotted Status Bar */}
-        <View style={styles.statusBar}>
-          {Array.from({ length: 4 }).map((_, index) => (
-            <View
-              key={index}
-              style={[
-                styles.dot,
-                {
-                  backgroundColor: index === currentStep ? 'white' : '#BDBDBD', // White for current step
-                  borderColor: index === currentStep ? 'white' : '#BDBDBD',
-                },
-              ]}
-            />
-          ))}
-        </View>
+    <View></View>
+    // <View style={[styles.container, { backgroundColor: colors[currentStep] }]}>
+    //   <View style={styles.overlay}>
+    //     {/* Title at the top */}
+    //     <Text style={styles.title}>{titles[currentStep]}</Text>
+        
+    //     {/* Image */}
+    //     <Image source={images[currentStep]} style={styles.backgroundImage} />
+        
+    //     {/* Description Text */}
+    //     <Text style={styles.description}>{descriptions[currentStep]}</Text>
 
-        {/* Next Button with FontAwesome Icon */}
-        <TouchableOpacity
-          style={styles.circleButton}
-          onPress={handleNext}
-        >
-          <FontAwesome name="arrow-right" size={20} color="white" />
-        </TouchableOpacity>
-      </View>
-    </View>
+    //     {/* Dotted Status Bar */}
+    //     <View style={styles.statusBar}>
+    //       {Array.from({ length: 4 }).map((_, index) => (
+    //         <View
+    //           key={index}
+    //           style={[
+    //             styles.dot,
+    //             {
+    //               backgroundColor: index === currentStep ? 'white' : '#BDBDBD', // White for current step
+    //               borderColor: index === currentStep ? 'white' : '#BDBDBD',
+    //             },
+    //           ]}
+    //         />
+    //       ))}
+    //     </View>
+
+    //     {/* Next Button with FontAwesome Icon */}
+    //     <TouchableOpacity
+    //       style={styles.circleButton}
+    //       onPress={handleNext}
+    //     >
+    //       <FontAwesome name="arrow-right" size={20} color="white" />
+    //     </TouchableOpacity>
+    //   </View>
+    // </View>
   );
 }
 

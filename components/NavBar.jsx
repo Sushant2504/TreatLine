@@ -6,13 +6,13 @@ const NavBar = () => (
   <View style={styles.navbar}>
     <View style={styles.logoContainer}>
       {/* Replace with the path to your logo image */}
-      <Image source={{ uri: 'https://img.freepik.com/free-vector/initial-gradient-design-vector_343694-2504.jpg?semt=ais_hybrid' }}  style={styles.logo} resizeMode="contain" />
-      <Text style={styles.logoText}>AscendAI</Text>
+      <Image source={{ uri: 'https://img.freepik.com/premium-vector/health-nurse-icon-flat-illustration-health-nurse-vector-icon-web-design_98396-45929.jpg?uid=R144673261&ga=GA1.1.1951753748.1737620454&semt=ais_hybrid' }}  style={styles.logo} resizeMode="contain" />
+      <Text style={styles.logoText}>TreatLine</Text>
     </View>
 
     <TouchableOpacity style={styles.profileContainer} onPress={()=>router.push('profile')}>
       {/* Replace with the URL or local path to the profile photo */}
-      <Image source={{ uri: 'https://img.freepik.com/free-photo/cute-boy-helmet-with-headphones-3d-rendering_1142-57213.jpg?semt=ais_hybrid' }} style={styles.profilePhoto} />
+      <Image source={{ uri: 'https://img.freepik.com/premium-vector/health-nurse-icon-flat-illustration-health-nurse-vector-icon-web-design_98396-45929.jpg?uid=R144673261&ga=GA1.1.1951753748.1737620454&semt=ais_hybrid' }} style={styles.profilePhoto} />
     </TouchableOpacity>
   </View>
 );
@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
     logoText: {
       fontSize: 18,
       fontWeight: 'bold',
-      color: '#111',  // Text color for the logo
+      color: '#111', 
+      padding: 8.0, // Text color for the logo
     },
     profileContainer: {
       borderRadius: 25,

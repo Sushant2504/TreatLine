@@ -1,24 +1,40 @@
-import { Image, StyleSheet, Platform, View } from 'react-native';
+import { Image, StyleSheet, Platform, View, Text } from 'react-native';
+import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-// import { Header } from '../components/homeHeader';
-import { Searchbar } from '../components/Searchbar';
+import Header from '../components/homeHeader';
+import Searchbar from '../components/SearchBar';
+import Categories from '../components/categories';
+
+
 
 
 export default function HomeScreen() {
+
+
   return (
 
     <View>
 
-      {/* <Header /> */}
+      <Header />
 
-      <Searchbar />
+      <Searchbar/>
+
+      <View style={styles.img}>
+      <Image source={{ uri: "https://img.freepik.com/free-vector/patient-taking-medical-examination-clinic_52683-57179.jpg?uid=R144673261&ga=GA1.1.1951753748.1737620454&semt=ais_hybrid"}} height={230} width={360} style={styles.content}></Image>
+      </View>
+
+      <Categories/>
+
     </View>
 
   );
 }
+
+
+
 
 const styles = StyleSheet.create({
   titleContainer: {
@@ -37,4 +53,27 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
   },
+
+
+
+  // image part
+
+
+  content: {
+       justifyContent: 'center',
+      //  display: 'flex', 
+       borderRadius: 12.0,
+  },
+
+
+  img: {
+    borderRadius: 12.0,
+    padding: 12.0,
+    justifyContent: 'center',
+  }
+
+  /// 
+
+
+
 });

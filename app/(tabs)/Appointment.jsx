@@ -5,7 +5,9 @@ import { DefaultTheme } from '@react-navigation/native';
 
 
 const Appointment = () => {
-     
+      return(
+         <View></View>
+      );
 }
 
 export default Appointment;

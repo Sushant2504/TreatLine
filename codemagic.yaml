@@ -1,13 +1,33 @@
 # It is CI/CD configuration file for the react native application ...
 
+# codemagic.yaml
 workflows:
-    react-native:
-       name: TreatLine
-       environment: 
-          vars: 
-              XCODE_WORKSPACE: 
-              XCODE_SCHEME:
-          node: latest
+  react-native-android:
+    name: React Native Android Build
+    environment:
+      groups:
+        - google_play_credentials # Add your Google Play credentials here
+      vars:
+        ANDROID_KEYSTORE: Encrypted(...) # Add your encrypted keystore file
+        ANDROID_KEYSTORE_PASSWORD: Encrypted(...) # Add your keystore password
+        ANDROID_KEY_ALIAS: Encrypted(...) # Add your key alias
+        ANDROID_KEY_PASSWORD: Encrypted(...) # Add your key password
     scripts:
-         - npm install
-         - echo 
+      - name: Set up environment
+        script: |
+          echo "Setting up environment..."
+          npm install -g yarn
+          yarn install
+      - name: Build Android Release
+        script: |
+          echo "Building Android release..."
+          cd android
+          ./gradlew assembleRelease
+    artifacts:
+      - android/app/build/outputs/apk/release/app-release.apk
+    publishing:
+      google_play:
+        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS # Reference your Google Play credentials
+        track: internal # Choose the track: internal, alpha, beta, or production
+        in_app_update_priority: 0 # Optional: Set in-app update priority (0-5)
+       

@@ -9,7 +9,7 @@ const SubHeading = ({ subHeadingtitle }) => {
     return (
         <View style={styles.content}>
             <Text style={styles.text1}> {subHeadingtitle} </Text>
-            <View style={styles.horizontalSpacer} />
+            <View style={styles.horizontalSpacer}/>
             <Text style={styles.text2}> See All </Text>
         </View>
     );
@@ -17,6 +17,7 @@ const SubHeading = ({ subHeadingtitle }) => {
 
 
 const styles = StyleSheet.create({
+
     content: {
         display: 'flex',
         flexDirection: 'row',
@@ -43,6 +44,11 @@ const styles = StyleSheet.create({
         marginRight: 10,
         marginTop: 2,
     },
+
+
+    horizontalSpacer: {
+         width: 130,
+    }
 
 
 });

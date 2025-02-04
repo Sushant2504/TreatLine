@@ -1,34 +1,34 @@
-import { Image, StyleSheet, Platform, View, Text } from 'react-native';
+import { Image, StyleSheet, Platform, View, Text, ScrollView } from 'react-native';
 import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
 import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import Header from '../components/homeHeader';
-import Searchbar from '../components/SearchBar';
-import Categories from '../components/categories';
+import Header from '../components/homeHeader'
+import SearchBar from '../components/SearchBar'
+import Categories from '../components/categories'
+import PremiumHospital from '../components/PremiumHospitals'
 
 
 
-
-export default function HomeScreen() {
+const HomeScreen = () => {
 
 
   return (
 
-    <View>
-
+    <ScrollView>
+     
       <Header />
 
-      <Searchbar/>
+      <SearchBar/>
 
       <View style={styles.img}>
       <Image source={{ uri: "https://img.freepik.com/free-vector/patient-taking-medical-examination-clinic_52683-57179.jpg?uid=R144673261&ga=GA1.1.1951753748.1737620454&semt=ais_hybrid"}} height={230} width={360} style={styles.content}></Image>
       </View>
 
       <Categories/>
+      <View style={styles.verticalSpacer} />
+      <PremiumHospital/>
 
-    </View>
+      
+    </ScrollView>
 
   );
 }
@@ -54,10 +54,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
 
+  verticalSpacer: {
+      height: 20,
+  },
+
 
 
   // image part
-
 
   content: {
        justifyContent: 'center',
@@ -74,6 +77,7 @@ const styles = StyleSheet.create({
 
   /// 
 
-
-
 });
+
+
+export default HomeScreen;

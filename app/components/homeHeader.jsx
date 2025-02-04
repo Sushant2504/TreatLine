@@ -6,6 +6,8 @@ import { router } from "expo-router";
 const Header = () => {
      
     return (
+
+        
          <View style={styles.content}>
              <View style={styles.textcontent}>
                  <Text style={styles.text1}>Hello 👋</Text>

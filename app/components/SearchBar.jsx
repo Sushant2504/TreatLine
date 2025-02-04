@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons'; 
+import { router } from "expo-router";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = () => {
   const [searchText, setSearchText] = useState('');
 
   const handleSearch = () => {

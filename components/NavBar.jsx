@@ -1,21 +1,24 @@
 import { router } from "expo-router";
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity} from "react-native";
+import { Ionicons } from '@expo/vector-icons'
 
-const NavBar = () => (
-  <View style={styles.navbar}>
-    <View style={styles.logoContainer}>
-      {/* Replace with the path to your logo image */}
-      <Image source={{ uri: 'https://img.freepik.com/premium-vector/health-nurse-icon-flat-illustration-health-nurse-vector-icon-web-design_98396-45929.jpg?uid=R144673261&ga=GA1.1.1951753748.1737620454&semt=ais_hybrid' }}  style={styles.logo} resizeMode="contain" />
-      <Text style={styles.logoText}>TreatLine</Text>
+const NavBar = () => {
+  return (
+    <View style={styles.navbar}>
+      <View style={styles.logoContainer}>
+        {/* Replace with the path to your logo image */}
+        <Ionicons name="menu" size={25} color={"black"} style={styles.icon} />
+        <Text style={styles.logoText}>TreatLine</Text>
+      </View>
+
+      <TouchableOpacity style={styles.profileContainer} onPress={() => router.push('profile')}>
+        {/* Replace with the URL or local path to the profile photo */}
+        <Image source={{ uri: 'https://img.freepik.com/premium-vector/health-nurse-icon-flat-illustration-health-nurse-vector-icon-web-design_98396-45929.jpg?uid=R144673261&ga=GA1.1.1951753748.1737620454&semt=ais_hybrid' }} style={styles.profilePhoto} />
+      </TouchableOpacity>
     </View>
-
-    <TouchableOpacity style={styles.profileContainer} onPress={()=>router.push('profile')}>
-      {/* Replace with the URL or local path to the profile photo */}
-      <Image source={{ uri: 'https://img.freepik.com/premium-vector/health-nurse-icon-flat-illustration-health-nurse-vector-icon-web-design_98396-45929.jpg?uid=R144673261&ga=GA1.1.1951753748.1737620454&semt=ais_hybrid' }} style={styles.profilePhoto} />
-    </TouchableOpacity>
-  </View>
-);
+  );
+};
 
 const styles = StyleSheet.create({
     navbar: {

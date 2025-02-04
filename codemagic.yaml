@@ -1,0 +1,13 @@
+# It is CI/CD configuration file for the react native application ...
+
+workflows:
+    react-native:
+       name: TreatLine
+       environment: 
+          vars: 
+              XCODE_WORKSPACE: 
+              XCODE_SCHEME:
+          node: latest
+    scripts:
+         - npm install
+         - echo 

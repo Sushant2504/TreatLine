@@ -25,6 +25,8 @@ const HomeScreen = () => {
 
       <Categories/>
       <View style={styles.verticalSpacer} />
+
+      
       <PremiumHospital/>
 
       

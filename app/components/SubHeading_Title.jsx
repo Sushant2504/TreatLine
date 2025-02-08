@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 
 
     horizontalSpacer: {
-         width: 130,
+         width: 160,
     }
 
 

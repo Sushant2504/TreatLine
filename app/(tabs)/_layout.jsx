@@ -29,7 +29,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="AIDoctor"
         options={{
-          title: 'AIDoctor',
+          title: 'CareConnect',
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="magic" color={color} />
           ),

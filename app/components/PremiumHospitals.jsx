@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StyleSheet, Color, Image, FlatList} from 'react-native'
+import { View, Text, TextInput, StyleSheet, Color, Image, FlatList } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { router } from "expo-router"
@@ -10,35 +10,40 @@ import HospitalItem from "./Hospital_item";
 
 const PremiumHospital = () => {
 
-    const Hospitals = [
-        pune = [
+    const Hospitals = {
+        pune: [
             {
-               id: 1,
-               image: "https://imgs.search.brave.com/7rPZih9Ex6H0CeaIXV9_wpM-eSYwuBLtX1bSbiUv3ws/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9saDUu/Z29vZ2xldXNlcmNv/bnRlbnQuY29tL3Av/QUYxUWlwTWtHa0Zr/alZxSVYwZ3JDS0Ns/b0lIX0hXSEFTWDZD/UFZ1S0VMND13NDgw/LWgzMDAtay1uLXJ3.jpeg",
-               title: "Aundh Hospital",
+                id: 1,
+                image: "https://imgs.search.brave.com/7rPZih9Ex6H0CeaIXV9_wpM-eSYwuBLtX1bSbiUv3ws/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9saDUu/Z29vZ2xldXNlcmNv/bnRlbnQuY29tL3Av/QUYxUWlwTWtHa0Zr/alZxSVYwZ3JDS0Ns/b0lIX0hXSEFTWDZD/UFZ1S0VMND13NDgw/LWgzMDAtay1uLXJ3.jpeg",
+                title: "Aundh Hospital",
+                address: "Vidyapeeth Rd, Ward No. 8, Pune University, Aundh, Pune, Maharashtra 411007",
             },
             {
                 id: 2,
                 image: "https://imgs.search.brave.com/ur2VVadiaWUqH8lL4GVbJelKkRutNaba1uACZPhoWmI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaGluZHVzdGFu/dGltZXMuY29tL3Jm/L2ltYWdlX3NpemVf/NjMweDM1NC9IVC9w/Mi8yMDIwLzEwLzE4/L1BpY3R1cmVzL18y/MDM2N2FkYS0xMTJl/LTExZWItOTQ3Ny00/ZjQzMDczMGVjZjMu/anBn",
-                title: "Aundh Goverment Hospital",
+                title: "Aundh Gov Hospital",
+                address: "Vidyapeeth Rd, Ward No. 8, Pune University, Aundh, Pune, Maharashtra 411007",
             },
             {
                 id: 3,
                 image: "https://imgs.search.brave.com/F6qpwwNnRPKjYs_RQMssyzbNCF0E92RI6Mk1H8gzQGM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2EzL0thbWxhX05l/aHJ1X0hvc3BpdGFs/X0FsbGFoYWJhZC5q/cGc",
                 title: "Kamla Nehru Hospital",
+                address: "Apt 102, 123 Main St, Anytown, CA 91234",
             },
             {
                 id: 4,
                 image: "https://imgs.search.brave.com/GsLOpFVAdNttLMeZG8x4hDUn5eG3PPS4RvaKWvM0VbM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8z/LzM0L0plaGFuZ2ly/X0hvc3BpdGFsX0J1/aWxkaW5nLmpwZw",
                 title: "Jehangir Hospital",
+                address: "Apt 102, 123 Main St, Anytown, CA 91234",
             },
             {
                 id: 5,
                 image: "https://imgs.search.brave.com/sHVoL5vBNZee8FaFiyxfWpW8WedaSvVh7BAeuRwP2Do/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA5Lzg1LzQ2LzQ2/LzM2MF9GXzk4NTQ2/NDY4MV9ZVmJ0ZVlx/clhneDlyejc5djl5/U3FxcEpvdTRKMzdz/My5qcGc",
                 title: "O.F.W.C Hospital",
+                address: "Apt 102, 123 Main St, Anytown, CA 91234",
             }
         ],
-        mumbai = [
+        mumbai: [
             {
                 id: 1,
                 image: "https://www.indicure.com/assets/img/2022/02/Wockhardt-Hospitals-360x223.jpg.webp",
@@ -101,7 +106,7 @@ const PremiumHospital = () => {
             }
 
         ],
-        kolhapur = [
+        kolhapur: [
             {
                 id: 1,
                 image: "https://ind.5bestincity.com/profileimages/india/orange-multispeciality-hospital-pvtltd-multispeciality-hospitals-kolhapur-maharashtra/28867-ae092-1.jpg",
@@ -133,11 +138,11 @@ const PremiumHospital = () => {
                 title: "City Hospital",
             }
         ],
-        nashik = [
+        nashik: [
             {
-               id: 1,
-               image: "https://www.justdial.com/Nashik/Chopda-Hospital-Opposite-Market-Yard-Near-Mahalaxmi-Theatre-Panchavati/0253P253STD3000928_BZDET?trkid=&term=&ncatid=10253670&area=&search=Best%20Hospitals%20in%20Nashik&mncatname=Hospitals&abd_btn=&abd_heading=&bd=1&cat_b2b_flag=0&searchfrom=lst",
-               title: "Chopda Hospital",
+                id: 1,
+                image: "https://www.justdial.com/Nashik/Chopda-Hospital-Opposite-Market-Yard-Near-Mahalaxmi-Theatre-Panchavati/0253P253STD3000928_BZDET?trkid=&term=&ncatid=10253670&area=&search=Best%20Hospitals%20in%20Nashik&mncatname=Hospitals&abd_btn=&abd_heading=&bd=1&cat_b2b_flag=0&searchfrom=lst",
+                title: "Chopda Hospital",
             },
             {
                 id: 2,
@@ -155,31 +160,32 @@ const PremiumHospital = () => {
                 title: "Narayani Hospital",
             }
         ],
-   ];
-   
+    };
 
-     return(
-         <View>
- 
-          <SubHeading subHeadingtitle={'City Prime Hospitsals'}/>
-           
-          <FlatList
-             data = {Hospitals.pune}
-             renderItem={({item, id}) => (
-                 <HospitalItem hospital={item}/>
-             )}
-          />
-             
-         </View>
-     );
+
+    return (
+        <View>
+
+            <SubHeading subHeadingtitle={'City Hospitsals'} />
+
+            <FlatList
+                data={Hospitals.pune}
+                horizontal = {true}
+                showHorizontalScrollIndicator = {false}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({ item }) => <HospitalItem hospital={item} />}
+            />
+
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-     maincontent: {
-           display: 'flex',
-           marginTop: 10,
+    maincontent: {
+        display: 'flex',
+        marginTop: 10,
 
-     },
+    },
 });
 
 

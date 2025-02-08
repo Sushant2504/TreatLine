@@ -6,6 +6,8 @@ import TextContainer from "../components/textfield";
 import Button from "../components/button"
 
 
+import Header from "../componenets/CareConnect/Header"
+
 
 const AIDoctor = () => {
      const [searchText, setSearchText] = useState('');
@@ -16,23 +18,7 @@ const AIDoctor = () => {
      return (
           <View>
 
-               <AIHeader />
-
-               <View style={styles.verticalSpacer}/>
-
-               <TextContainer textvalue={"Give your symptoms"}/>
-
-               <TextContainer textvalue={"Give your symptoms"}/>
-
-               <TextContainer textvalue={"Give your symptoms"}/>
-
-               <TextContainer textvalue={"Give your symptoms"}/>
-
-               <TextContainer textvalue={"Give your symptoms"}/>
-
-               <TextContainer textvalue={"Give your symptoms"}/>
-
-               <Button style={styles.button}/>
+              <Header/>
 
           </View>
      );

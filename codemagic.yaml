@@ -30,4 +30,4 @@ workflows:
         credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS # Reference your Google Play credentials
         track: internal # Choose the track: internal, alpha, beta, or production
         in_app_update_priority: 0 # Optional: Set in-app update priority (0-5)
-       
+        

@@ -34,7 +34,7 @@ const Doctordata = [
             image: "",
             doctorname: "",
             specility: "",
-      }
+      },
 ];
 
 

@@ -87,12 +87,11 @@ const doctorlistdata = [
 
 const Appointment = () => {
       return(
-         <View>
-       <SubHeading subHeadingtitle={"Popular Doctors"}/>
+         <ScrollView>
 
             
 
-         </View>
+         </ScrollView>
       );
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native';
 import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
-
+import { router } from "expo-router";
 
 const Button = () => {
     return (

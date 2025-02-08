@@ -2,18 +2,14 @@ import { View, Text, TextInput, StyleSheet, Color, Image, FlatList } from 'react
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { router } from "expo-router";
-import {tw} from 'twrnc';
 
 
-const BigTextBox = () => {
-    // const [] = useState();
+const Slots = () => {
      return(
          <View>
-              {/* <TextInput style={tw `flex-1`}></TextInput> */}
+             
          </View>
      );
 }
 
-
-
-export default BigTextBox;
+export default Slots;

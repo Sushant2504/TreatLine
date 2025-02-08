@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Platform, View, Text, ScrollView } from 'react-native';
 import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
 import { HelloWave } from '@/components/HelloWave';
+import NavBar from '../../components/NavBar'; 
 import Header from '../components/homeHeader'
 import SearchBar from '../components/SearchBar'
 import Categories from '../components/categories'
@@ -12,9 +13,10 @@ const HomeScreen = () => {
 
 
   return (
-
+    
     <ScrollView>
-     
+       <NavBar/>
+       
       <Header />
 
       <SearchBar/>
@@ -26,7 +28,7 @@ const HomeScreen = () => {
       <Categories/>
       <View style={styles.verticalSpacer} />
 
-      
+
       <PremiumHospital/>
 
       

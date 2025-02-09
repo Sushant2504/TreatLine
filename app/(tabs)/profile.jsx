@@ -2,57 +2,12 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 
-const userData = {
-  name: 'Ramesh Patil',
-  avatar: 'https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg',
-  bio: 'An eager learner in computer science, currently enrolled in multiple courses.',
-  courses: [
-    { title: 'React Native for Beginners', status: 'Completed' },
-    { title: 'Advanced JavaScript', status: 'In Progress' },
-    { title: 'Web Development Masterclass', status: 'Not Started' },
-  ],
-  score: 95,
-};
+
 
 const ProfilePage = () => {
   return (
     <ScrollView style={styles.container}>
-      {/* Header Section */}
-      <View style={styles.header}>
-        <Image source={{ uri: userData.avatar }} style={styles.avatar} />
-        <Text style={styles.userName}>{userData.name}</Text>
-        <Text style={styles.userBio}>{userData.bio}</Text>
-        <Text style={styles.userScore}>Score: {userData.score}</Text>
-      </View>
-
-      {/* Action Buttons */}
-      <View style={styles.actions}>
-        <TouchableOpacity style={styles.actionButton}>
-          <FontAwesome name="edit" size={20} color="#fff" />
-          <Text style={styles.actionText}>Edit Profile</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.actionButton}>
-          <MaterialIcons name="settings" size={20} color="#fff" />
-          <Text style={styles.actionText}>Settings</Text>
-        </TouchableOpacity>
-      </View>
-
-      {/* Courses Section */}
-      <View style={styles.details}>
-        <Text style={styles.sectionTitle}>My Courses</Text>
-        {userData.courses.map((course, index) => (
-          <View key={index} style={styles.courseItem}>
-            <Text style={styles.courseTitle}>{course.title}</Text>
-            <Text style={styles.courseStatus}>{course.status}</Text>
-          </View>
-        ))}
-      </View>
-
-      {/* Additional Sections */}
-      <View style={styles.details}>
-        <Text style={styles.sectionTitle}>Achievements</Text>
-        {/* Add achievements if any */}
-      </View>
+      
     </ScrollView>
   );
 };

@@ -8,7 +8,7 @@ import { FontAwesome } from '@expo/vector-icons';
 const PaymentScreen = () => {
      return(
          <View>
-
+           
            
          </View>
      );
